@@ -7,7 +7,8 @@
 //
 
 #import "AppDelegate.h"
-
+#import "Mobclick.h"
+#import <Bugly/CrashReporter.h>
 @interface AppDelegate ()
 
 @end
@@ -17,6 +18,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+//    [MobClick startWithAppkey:@"56a4314e67e58e72bb0024e7" reportPolicy:BATCH channelId:nil];
+    [[CrashReporter sharedInstance] installWithAppId:@"900018033"];
+    
     return YES;
 }
 
